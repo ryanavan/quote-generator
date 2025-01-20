@@ -20,33 +20,33 @@ function complete() {
 }
 
 //Show New Quote
-function newQuote() {
-    loading();
-    //Pick a random quote from apiQuotes array
-    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    //Check if Author field is blank and replace is with "Unknown"
-    if (!quote.author) {
-        authorText.textContent = 'Unknown';
-    } else {
-        authorText.textContent = quote.author;
-    }
-    //Check Quote length to determine styling
-    if (quote.text.length > 100) {
-        quoteText.classList.add('long-quote');
-    } else {
-        quoteText.classList.remove('long-quote');
-    }
-    // Set Quote, Hide Loader
-    quoteText.textContent = quote.text;
-    complete();
-}
+//function newQuote() {
+//    loading();
+//    //Pick a random quote from apiQuotes array
+//    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+//    //Check if Author field is blank and replace is with "Unknown"
+//    if (!quote.author) {
+//        authorText.textContent = 'Unknown';
+//    } else {
+//        authorText.textContent = quote.author;
+//    }
+//    //Check Quote length to determine styling
+//    if (quote.text.length > 100) {
+//        quoteText.classList.add('long-quote');
+//    } else {
+//        quoteText.classList.remove('long-quote');
+//    }
+//    // Set Quote, Hide Loader
+//    quoteText.textContent = quote.text;
+//    complete();
+//}
 
 //Local pull from quotes.js
-// function newQuote() {
-//     //Pick a random quote from apiQuotes array
-//     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
-//     console.log(quote);
-// }
+ function newQuote() {
+     //Pick a random quote from apiQuotes array
+     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
+     console.log(quote);
+ }
 
 // Get Quotes From API
 async function getQuotes() {
